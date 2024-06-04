@@ -1,47 +1,109 @@
-import { useReducer } from "react";
 import { AnimatePresence } from "framer-motion";
 
 import ScrollToTop from "./components/ScrollToTop";
 import PageTransition from "./components/PageTransition";
-import Loading from "./components/Loading";
+// import Loading from "./components/Loading";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
-import { useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
-const initialArgs = {
-    loading: true,
-};
+import "./font/fonts.css";
+import "./css/index.css";
+import { Promotions } from "./pages/Promotions";
+import { CasaRaco } from "./pages/CasaRaco";
+import { Experiences } from "./pages/Experiences";
+import { Rooms } from "./pages/Rooms";
+import { Coahuila } from "./pages/Coahuila";
+import { Gastronomy } from "./pages/Gastronomy";
+import { Boardroom } from "./pages/Boardroom";
 
-const reducer = (prev, next) => ({ ...prev, ...next });
+import "./lang/i18n";
 
 export default function App() {
-    const location = useLocation();
-    const [state, dispatch] = useReducer(reducer, initialArgs);
+	const location = useLocation();
 
-    if (state.loading) return <Loading />;
+	// if (false) return <Loading />;
 
-    return (
-        <>
-            <Header />
-            <AnimatePresence mode="wait">
-                <ScrollToTop />
+	return (
+		<>
+			<Header />
+			<ScrollToTop />
+			<AnimatePresence mode="wait">
+				<main>
+					<Routes location={location} key={location.pathname}>
+						<Route
+							index
+							element={
+								<PageTransition>
+									<Home />
+								</PageTransition>
+							}
+						/>
+						<Route
+							path="/promociones"
+							element={
+								<PageTransition>
+									<Promotions />
+								</PageTransition>
+							}
+						/>
+						<Route
+							path="/casa-raco"
+							element={
+								<PageTransition>
+									<CasaRaco />
+								</PageTransition>
+							}
+						/>
+						<Route
+							path="/experiencias"
+							element={
+								<PageTransition>
+									<Experiences />
+								</PageTransition>
+							}
+						/>
+						<Route
+							path="/habitaciones"
+							element={
+								<PageTransition>
+									<Rooms />
+								</PageTransition>
+							}
+						/>
+						<Route
+							path="/parras-coahuila"
+							element={
+								<PageTransition>
+									<Coahuila />
+								</PageTransition>
+							}
+						/>
+						<Route
+							path="/gastronomia"
+							element={
+								<PageTransition>
+									<Gastronomy />
+								</PageTransition>
+							}
+						/>
+						<Route
+							path="/sala-de-juntas"
+							element={
+								<PageTransition>
+									<Boardroom />
+								</PageTransition>
+							}
+						/>
 
-                <Routes location={location} key={location.pathname}>
-                    <Route
-                        index
-                        element={
-                            <PageTransition>
-                                <Home />
-                            </PageTransition>
-                        }
-                    />
+						<Route path="*" element={<PageNotFound />} />
+					</Routes>
+				</main>
+			</AnimatePresence>
 
-                    <Route path="*" element={<PageNotFound />} />
-                </Routes>
-            </AnimatePresence>
-            <Footer />
-        </>
-    );
+			<Footer />
+		</>
+	);
 }
