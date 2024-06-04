@@ -13,20 +13,18 @@ module.exports = {
     darkMode: "class", // or 'class'
     theme: {
         extend: {
-            colors: {
-                azul: "#7AD4F4",
-                azul25: "#7AD4F440",
-                verde: "#55CFA6",
-                magenta: "#FF7DBE",
-                oscuro: "#1E1E1E",
-                gris: "#D9D9D9",
-            },
-            fontFamily: {
-                ibmPlex: ["IBM Plex Mono", "sans-serif"],
-                archivoCondensed: ["Archivo Condensed", "sans-serif"],
-                archivoExpanded: ["Archivo Expanded", "sans-serif"],
-            },
-        },
+			colors: {
+				cafe: "#886242",
+				crema: "#fbf9f8",
+			},
+			fontFamily: {
+				cormorant: ["Cormorant Garamond", "sans-serif"],
+				instrumentSans: ["Instrument Sans", "sans-serif"],
+			},
+			boxShadow: {
+				card: "5px 5px 25px 0 rgba(0, 0, 0, 0.1)",
+			},
+		},
     },
 
     plugins: [require("@tailwindcss/forms"), require("flowbite/plugin")],
