@@ -30,10 +30,9 @@ export const CasaRaco = () => {
 						<div className="bg-cafe h-[40px] hidden md:block w-full md:absolute bottom-0 left-0 -z-10"></div>
 					</Container>
 				</div>
-
 				<div className="bg-cafe h-[100px] w-full"></div>
-
-				<blockquote className="bg-cafe text-white pb-10 lg:pb-16 xl:pb-24">
+				{/* //Todo: reducir espacios en los bloques cafes de las secciones */}
+				<blockquote className="bg-cafe text-white pb-10 lg:pb-16 xl:pb-24 not-italic">
 					<Container className="max-w-6xl text-center">
 						<Text className="italic mb-10">{t("about.desc6")}</Text>
 						<Text className="font-bold">{t("about.desc7")}</Text>

@@ -7,12 +7,14 @@
 	"about.desc6": "Construimos al lado de nuestros huéspedes recuerdos positivos que durarán para siempre. En nuestros espacios no solo encontrarás un lugar para hospedarte, sino una experiencia integral que te permitirá disfrutar al máximo tu visita a Parras, Coahuila y sus alrededores.",
 	"about.desc7": "¡Esperamos poder darte la bienvenida pronto!",
 	"about.title": "<span className=\"font-bold\">Ubicado</span> en el encantador enclave de <span className=\"font-bold\">Parras de la Fuente</span>",
-	"amenidad.1": "Sala de juntas <br /> 16 personas",
+	"amenidad.1": "Sala de juntas <br /> 16 personas <br /><span className=\"font-bold\">(Próximamente)</span>",
 	"amenidad.2": "Aire <br /> Acondicionado",
 	"amenidad.3": "Desayuno <br /> incluido",
 	"amenidad.4": "Maquina de Café <br /> en habitación",
 	"amenidad.5": "Zona Jardín",
 	"amenidad.6": "Comedor",
+	"amenidad.7": "Yoga <br /><span className=\"font-bold\">(Próximamente)</span>",
+	"amenidad.8": "Cuarto de masaje <br /><span className=\"font-bold\">(Próximamente)</span>",
 	"boardroom.desc2": "Parras de la Fuente es más que un destino turístico, es un encuentro con la historia, la cultura y la hospitalidad mexicana. Si estás buscando un lugar donde cada paso te cuenta una historia, donde cada sabor te lleva a una tradición y cada vista te deja sin aliento, entonces Parras te espera con los brazos abiertos.",
 	"boardroom.text1": "Concentra a tu equipo de trabajo en nuestra cómoda sala de juntas con capacidad de hasta 16 personas.",
 	"boardroom.text2": "En Casa Raco, ofrecemos una sala ejecutiva para satisfacer las necesidades de tu empresa. Nuestra sala ejecutiva está equipada con instalaciones y servicios útiles para garantizar que sus reuniones sean productivas y exitosas.",
@@ -97,5 +99,6 @@
 	"rooms.2.title": "habitación KING",
 	"rooms.desc": "<span className=\"font-bold\">Casa Raco</span>, el inicio de una estancia inolvidable en Parras, Coahuila. Nuestro hotel boutique es más que sólo un lugar de hospedaje, se trata de un espacio cuidadosamente diseñado para que vivas una experiencia única.",
 	"rooms.title": "Te damos la bienvenida a",
+	"subscribe": "Suscribirse",
 	"verMas": "Ver más"
 }

@@ -20,6 +20,7 @@ import { Gastronomy } from "./pages/Gastronomy";
 import { Boardroom } from "./pages/Boardroom";
 
 import "./lang/i18n";
+import { Toaster } from "sonner";
 
 export default function App() {
 	const location = useLocation();
@@ -30,6 +31,7 @@ export default function App() {
 		<>
 			<Header />
 			<ScrollToTop />
+			<Toaster />
 			<AnimatePresence mode="wait">
 				<main>
 					<Routes location={location} key={location.pathname}>

@@ -11,20 +11,24 @@ export const Offers = () => {
 			<Container>
 				<Text.TitleSections className="mb-6">{t("home.offsers.title")}</Text.TitleSections>
 
-				<Text className="mb-10 lg:mb-16 xl:mb-[60px]">{t("home.offsers.desc")}</Text>
+				<Text className="mb-8 lg:mb-10 xl:mb-[40px]">{t("home.offsers.desc")}</Text>
+
+				<a className="block max-w-max mx-auto" href="https://hotels.cloudbeds.com/reservation/aEkhze" rel="noopener noreferrer">
+					<Button className="mb-4">{t("bookNow")}</Button>
+				</a>
 			</Container>
 
 			<div className="relative">
 				<div className="bg-cafe w-full h-[160px] absolute top-1/2 -translate-y-1/2 hidden lg:block" />
 
 				<div className="max-w-[1500px] grid lg:grid-cols-3 grid-cols-1 pt-10 relative z-10 mx-auto">
-					<CardOffer cover="/img/home/imagen1.jpg" url={"/promociones"}>
+					<CardOffer cover="/img/home/imagen1.jpg" url={"/promociones"} textBtn={t("verMas")}>
 						<Text className="text-black mb-4">{t("home.offsers.card1")}</Text>
 					</CardOffer>
-					<CardOffer cover="/img/home/imagen2.jpg" url={"/promociones"}>
+					<CardOffer cover="/img/home/imagen2.jpg" url={"/promociones"} textBtn={t("verMas")}>
 						<Text className="text-black mb-4">{t("home.offsers.card2")}</Text>
 					</CardOffer>
-					<CardOffer cover="/img/home/imagen3.jpg" url={"/promociones"}>
+					<CardOffer cover="/img/home/imagen3.jpg" url={"/promociones"} textBtn={t("bookNow")}>
 						<Text className="text-black mb-4">{t("home.offsers.card3")}</Text>
 					</CardOffer>
 				</div>
@@ -33,7 +37,7 @@ export const Offers = () => {
 	);
 };
 
-const CardOffer = ({ cover, url, children }) => {
+const CardOffer = ({ cover, url, children, textBtn }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -47,7 +51,7 @@ const CardOffer = ({ cover, url, children }) => {
 					{children}
 
 					<Button.To url={url} className="py-2 max-w-[140px] block mx-auto">
-						{t("verMas")}
+						{textBtn}
 					</Button.To>
 				</main>
 			</article>

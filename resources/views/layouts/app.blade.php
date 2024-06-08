@@ -8,13 +8,13 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    @include('./modules/metas')
+    {{-- @include('layouts.modules.metas') --}}
 
     @viteReactRefresh
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/react/index.jsx'])
 </head>
 
-<body class="antialiased bg-white">
+<body class="bg-crema font-cormorant pt-[52px] md:pt-[76px] text-cafe">
     <div id="root" class=""></div>
 </body>
 

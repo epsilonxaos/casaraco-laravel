@@ -19,6 +19,13 @@ use App\Http\Controllers\ComandosController;
 
 Route::get('/artisan', [ComandosController::class, 'executeComands']);
 Route::view('/', 'layouts.app')->where('path', '.*');
+Route::view('/casa-raco', 'layouts.app')->where('path', '.*');
+Route::view('/promociones', 'layouts.app')->where('path', '.*');
+Route::view('/habitaciones', 'layouts.app')->where('path', '.*');
+Route::view('/experiencias', 'layouts.app')->where('path', '.*');
+Route::view('/gastronomia', 'layouts.app')->where('path', '.*');
+Route::view('/sala-de-juntas', 'layouts.app')->where('path', '.*');
+Route::view('/parras-coahuila', 'layouts.app')->where('path', '.*');
 
 Route::get('/dashboard', function () {
 	return view('dashboard');

@@ -10,11 +10,11 @@ export const Bienvenida = () => {
 	return (
 		<section className="text-center py-10 bg-no-repeat bg-cover bg-left-top" style={{ backgroundImage: "url(/img/home/bg-seccion2.jpg)" }}>
 			<Container>
-				<img src="/img/logo-menu.png" alt="icono" className="mx-auto w-[100px] mb-4" />
+				<img src="/img/logo-menu.png" alt="icono" className="mx-auto w-[45px] md:w-[100px] mb-4" />
 
 				<Text.Title className="mb-5">{t("home.title")}</Text.Title>
 
-				<img src="/img/logotipo.png" className="mx-auto mb-9" alt="Casa Raco" />
+				<img src="/img/logotipo.png" className="mx-auto w-[150px] md:w-auto mb-10 " alt="Casa Raco" />
 
 				<Text className="max-w-[850px] mx-auto mb-6">{t("home.desc")}</Text>
 
