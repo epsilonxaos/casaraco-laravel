@@ -82,6 +82,7 @@ class Helpers
 	{
 		$meses = array("Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic");
 
+		if ($fecha) return '';
 		$fecha = Carbon::parse($fecha);
 		$mes = $meses[($fecha->format('n')) - 1];
 		return $fecha->format('d') . '/' . $mes . '/' . $fecha->format('Y');

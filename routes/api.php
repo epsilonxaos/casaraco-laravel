@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/experiences/last', [ApiController::class, 'getLastExperiences']);
+Route::get('/experience/{id}', [ApiController::class, 'getExperiencies2']);
+Route::get('/experiences', [ApiController::class, 'getAllExperiencies']);

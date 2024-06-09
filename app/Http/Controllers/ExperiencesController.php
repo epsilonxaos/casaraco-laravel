@@ -16,7 +16,16 @@ class ExperiencesController extends Controller
 	 */
 	public function index()
 	{
-		//
+		return view('panel.experiences.index', [
+			"title" => "Experiencias",
+			"breadcrumb" => [
+				[
+					'title' => 'Experiencias',
+					'active' => true,
+				],
+
+			]
+		]);
 	}
 
 	/**
@@ -129,5 +138,17 @@ class ExperiencesController extends Controller
 		Experiences::where('id', $id)->delete();
 
 		return redirect()->back()->with('success', 'El registro se ha eliminado correctamente');
+	}
+
+	/**
+	 * Change status to show - hidden
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @return \Illuminate\Http\Response
+	 */
+	public function changeStatus(Request $request)
+	{
+		Helpers::changeStatus('experiences', $request->id, $request->status);
+		return 'true';
 	}
 }

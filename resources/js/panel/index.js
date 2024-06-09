@@ -17,6 +17,8 @@ window.deleteSubmitForm = function (id) {
     });
 };
 
+console.log('init')
+
 window.cambiar_status = function (el, id, status, url) {
     axios
         .post(url, {

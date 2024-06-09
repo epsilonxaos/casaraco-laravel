@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/dropify/css/dropify.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/bootstrap-icons/font/bootstrap-icons.css') }}">
     <style>
-        .dropify-render {
+        .dropify-render img {
             margin: auto;
         }
 
@@ -35,6 +35,7 @@
         }
     </style>
     @stack('style')
+    @livewireStyles
 </head>
 
 <body class="font-sans text-gray-900 bg-slate-100 antialiased">
@@ -57,15 +58,27 @@
 
     <script>
         // var DateTime = luxon.DateTime;
+
+        function deleteSubmitForm(id) {
+            Swal.fire({
+                title: "¿Finalizar eliminación?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Eliminar',
+                denyButtonText: `Cancelar`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire('Eliminado!', '', 'success')
+                    document.querySelector('.delete-form-' + id).submit();
+                }
+            });
+        }
     </script>
 
+    @livewireScripts
     <script src="{{ asset('plugins/jquery/jquery-3.7.0.min.js') }}"></script>
     <script src="{{ asset('plugins/dropify/js/dropify.min.js') }}"></script>
-    @vite([
-		'resources/js/panel/index.js'
-		'resources/js/panel/trumbowygInit.js'
-	])
+    <script src="{{ asset('js/panel/app.js') }}"></script>
+    @vite(['resources/js/panel/trumbowygInit.js', 'resources/js/panel/index.js'])
     @stack('script')
 </body>
-
-</html>

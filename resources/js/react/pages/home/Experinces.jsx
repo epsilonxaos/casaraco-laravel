@@ -3,8 +3,25 @@ import Button from "../../components/Button";
 import { Container } from "../../components/Container";
 import Text from "../../components/Text";
 
+import { useEffect, useState } from "react";
+import { _PATH_API, _PATH_SOURCES } from "../../constants/constants";
+
 export const Experiences = () => {
 	const { t } = useTranslation();
+	const [data, setData] = useState([])
+
+	useEffect(() => {
+        async function fetchData() {
+            const response = await axios.get(
+                _PATH_API + "api/experiences/last",
+            );
+    
+            setData(response.data);
+        }
+        fetchData();
+    }, []);
+
+	if(data.length === 0) return ''
 
 	return (
 		<section className="py-10 lg:py-16 xl:pb-32 xl:pt-40">
@@ -21,15 +38,11 @@ export const Experiences = () => {
 						</div>
 					</div>
 					<div className="col-span-1 md:col-span-2 grid grid-cols-2 gap-2 lg:gap-4 md:grid-cols-3">
-						<picture className="col-span-1">
-							<img src="/img/home/1.png" className="h-[200px] md:h-[500px] lg:h-[650px] object-cover w-full" alt="experiencia 1" />
-						</picture>
-						<picture className="col-span-1">
-							<img src="/img/home/2.png" className="h-[200px] md:h-[500px] lg:h-[650px] object-cover w-full" alt="experiencia 1" />
-						</picture>
-						<picture className="col-span-2 md:col-span-1">
-							<img src="/img/home/3.png" className="h-[200px] md:h-[500px] lg:h-[650px] object-cover w-full" alt="experiencia 1" />
-						</picture>
+						{data.map((item) => 
+							<picture className="col-span-1">
+								<img src={_PATH_SOURCES + item.cover} className="h-[200px] md:h-[500px] lg:h-[650px] object-cover w-full" alt="experiencia 1" />
+							</picture>
+						)}
 					</div>
 				</div>
 			</Container>

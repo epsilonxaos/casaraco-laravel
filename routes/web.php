@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComandosController;
+use App\Http\Controllers\ExperiencesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::view('/casa-raco', 'layouts.app')->where('path', '.*');
 Route::view('/promociones', 'layouts.app')->where('path', '.*');
 Route::view('/habitaciones', 'layouts.app')->where('path', '.*');
 Route::view('/experiencias', 'layouts.app')->where('path', '.*');
+Route::view('/experiencias/{id}', 'layouts.app')->where('path', '.*');
 Route::view('/gastronomia', 'layouts.app')->where('path', '.*');
 Route::view('/sala-de-juntas', 'layouts.app')->where('path', '.*');
 Route::view('/parras-coahuila', 'layouts.app')->where('path', '.*');
@@ -72,6 +74,16 @@ Route::middleware(['auth:admin', 'verified'])->prefix('/admin')->group(function 
 		Route::patch('/update/{id?}', [AdminController::class, 'updateProfile'])->name('panel.usuarios.update');
 		Route::put('/update/{id?}/password', [AdminController::class, 'updateProfilePassword'])->name('panel.usuarios.update.password');
 		Route::delete('/destroy/{id?}', [AdminController::class, 'destroyProfile'])->name('panel.usuarios.destroy');
+	});
+
+	Route::prefix('/experiences')->group(function () {
+		Route::get('/', [ExperiencesController::class, 'index'])->name('panel.experiences.index');
+		Route::get('/create', [ExperiencesController::class, 'create'])->name('panel.experiences.create');
+		Route::post('/store', [ExperiencesController::class, 'store'])->name('panel.experiences.store');
+		Route::get('/edit/{id?}', [ExperiencesController::class, 'edit'])->name('panel.experiences.edit');
+		Route::patch('/update/{id?}', [ExperiencesController::class, 'update'])->name('panel.experiences.update');
+		Route::delete('/destroy/{id?}', [ExperiencesController::class, 'destroy'])->name('panel.experiences.destroy');
+		Route::post('/change/status', [ExperiencesController::class, 'changeStatus'])->name('panel.experiences.changeStatus');
 	});
 });
 

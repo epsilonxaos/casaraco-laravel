@@ -14,6 +14,7 @@ import "./css/index.css";
 import { Promotions } from "./pages/Promotions";
 import { CasaRaco } from "./pages/CasaRaco";
 import { Experiences } from "./pages/Experiences";
+import { ExperiencesDetail } from "./pages/ExperiencesDetail";
 import { Rooms } from "./pages/Rooms";
 import { Coahuila } from "./pages/Coahuila";
 import { Gastronomy } from "./pages/Gastronomy";
@@ -64,6 +65,14 @@ export default function App() {
 							element={
 								<PageTransition>
 									<Experiences />
+								</PageTransition>
+							}
+						/>
+						<Route
+							path="/experiencias/:id"
+							element={
+								<PageTransition>
+									<ExperiencesDetail />
 								</PageTransition>
 							}
 						/>

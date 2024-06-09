@@ -18,16 +18,16 @@ return new class extends Migration
 			$table->timestamps();
 		});
 
-		Schema::create('experience_translations', function (Blueprint $table) {
+		Schema::create('experiences_translations', function (Blueprint $table) {
 			$table->increments('id');
-			$table->integer('experience_id')->unsigned();
+			$table->integer('experiences_id')->unsigned();
 			$table->string('locale')->index();
 
 			$table->string('title');
 			$table->longText('content')->nullable();
 
-			$table->unique(['experience_id', 'locale']);
-			$table->foreign('experience_id')->references('id')->on('experiences')->onDelete('cascade');
+			$table->unique(['experiences_id', 'locale']);
+			$table->foreign('experiences_id')->references('id')->on('experiences')->onDelete('cascade');
 		});
 	}
 
