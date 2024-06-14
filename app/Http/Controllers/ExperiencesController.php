@@ -56,8 +56,13 @@ class ExperiencesController extends Controller
 	{
 
 		$cover = Helpers::addFileStorage($request->file('cover'), $this->directorio);
+		$portada = Helpers::addFileStorage($request->file('cover'), $this->directorio);
 		$p = Experiences::create([
 			'cover' => $cover,
+			'status' => 1
+		]);
+		$p = Experiences::create([
+			'portada' => $portada,
 			'status' => 1
 		]);
 
@@ -116,6 +121,12 @@ class ExperiencesController extends Controller
 			Helpers::deleteFileStorage('experiences', 'cover', $id);
 			$cover = Helpers::addFileStorage($request->file('cover'), $this->directorio);
 			$upd->cover = $cover;
+			$upd->save();
+		}
+		if ($request->hasFile('portada')) {
+			Helpers::deleteFileStorage('experiences', 'portada', $id);
+			$portada = Helpers::addFileStorage($request->file('portada'), $this->directorio);
+			$upd->portada = $portada;
 			$upd->save();
 		}
 

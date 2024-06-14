@@ -19,6 +19,7 @@ class Experiences extends Model implements TranslatableContract
 	protected $table = 'experiences';
 	protected $fillable = [
 		'cover',
+		'portada',
 		'status'
 	];
 }

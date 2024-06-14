@@ -6,15 +6,15 @@ import { Container } from "../components/Container";
 import Text from "../components/Text";
 
 export const Rooms = () => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 
 	return (
 		<>
 			<Banner src={"/img/rooms/banner.jpg"} />
 
-			<section className="py-10 lg:py-16 xl:py-24">
+			<section className="pt-8 md:py-10 lg:py-16 xl:py-24">
 				<Container className="text-center">
-					<img src="/img/logo-menu.png" alt="icono" className="mx-auto w-[100px] mb-4" />
+					<img src="/img/logo-menu.png" alt="icono" className="mx-auto w-[60px] md:w-[100px] mb-4" />
 
 					<Text.Title className="mb-5">{t("rooms.title")}</Text.Title>
 
@@ -24,9 +24,9 @@ export const Rooms = () => {
 				</Container>
 			</section>
 
-			<section className="py-24 bg-no-repeat bg-left-top bg-cover" style={{ backgroundImage: "url(/img/rooms/bg.png" }}>
+			<section className="py-8 md:py-24 bg-no-repeat bg-left-top bg-cover" style={{ backgroundImage: "url(/img/rooms/bg.png" }}>
 				<Container className="max-w-7xl px-0 lg:px-4">
-					<div className="relative z-[1] lg:flex lg:items-center mb-24">
+					<div className="relative z-[1] lg:flex lg:items-center mb-8 md:mb-24">
 						<div className="h-full w-[90%] sm:w-[80%] lg:w-full lg:h-[85%] bg-[#d6c0ac] absolute top-0 lg:top-1/2 left-1/2 lg:left-0 max-lg:-translate-x-1/2 lg:-translate-y-1/2 -z-10"></div>
 
 						<picture className="relative lg:w-[60%]">
@@ -43,7 +43,7 @@ export const Rooms = () => {
 
 							<a href="https://hotels.cloudbeds.com/reservation/aEkhze" target="_blank" rel="noopener noreferrer">
 								<Button.Link className={"bg-cafe text-crema"} url={"https://hotels.cloudbeds.com/reservation/aEkhze"} blank={false}>
-									Book now
+									{i18n.language == 'es' ? 'Reservar ahora' : 'Book now'}
 								</Button.Link>
 							</a>
 						</main>
@@ -65,7 +65,7 @@ export const Rooms = () => {
 							</div>
 
 							<Button.Link className={"bg-cafe text-crema"} url={"https://hotels.cloudbeds.com/reservation/aEkhze"} blank={false}>
-								Book now
+							{i18n.language == 'es' ? 'Reservar ahora' : 'Book now'}
 							</Button.Link>
 						</main>
 					</div>

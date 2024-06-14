@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/experiences/last', [ApiController::class, 'getLastExperiences']);
 Route::get('/experience/{id}', [ApiController::class, 'getExperiencies2']);
 Route::get('/experiences', [ApiController::class, 'getAllExperiencies']);
+Route::get('/website', [ApiController::class, 'getWebsite']);

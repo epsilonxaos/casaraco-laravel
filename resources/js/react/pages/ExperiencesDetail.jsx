@@ -38,7 +38,7 @@ export const ExperiencesDetail = () => {
 
 	return (
 		<>
-			<Banner className="max-h-[500px]" src={_PATH_SOURCES + data.cover} />
+			<Banner className="max-h-[500px]" src={_PATH_SOURCES + data.portada} />
 
 			<section className="py-10 lg:py-16 xl:py-24">
 					<Text.TitleSections className="mb-10 md:mb-20 text-center">{t("experiences.title")}</Text.TitleSections>

@@ -6,6 +6,7 @@ use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComandosController;
 use App\Http\Controllers\ExperiencesController;
+use App\Http\Controllers\WebsiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,6 +75,12 @@ Route::middleware(['auth:admin', 'verified'])->prefix('/admin')->group(function 
 		Route::patch('/update/{id?}', [AdminController::class, 'updateProfile'])->name('panel.usuarios.update');
 		Route::put('/update/{id?}/password', [AdminController::class, 'updateProfilePassword'])->name('panel.usuarios.update.password');
 		Route::delete('/destroy/{id?}', [AdminController::class, 'destroyProfile'])->name('panel.usuarios.destroy');
+	});
+
+	// Website
+	Route::prefix('/website')->group(function () {
+		Route::get('{seccion}/edit', [WebsiteController::class, 'edit'])->name('panel.website.edit');
+		Route::put('{seccion}/update', [WebsiteController::class, 'update'])->name('panel.website.update');
 	});
 
 	Route::prefix('/experiences')->group(function () {

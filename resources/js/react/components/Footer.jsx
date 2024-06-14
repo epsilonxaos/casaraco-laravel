@@ -17,33 +17,29 @@ const Footer = () => {
 
 	return (
 		<footer className="w-full text-white">
-			<div className="bg-black py-6 md:py-16 text-center">
+			<div className="bg-black py-6 md:py-16 md:pb-4 text-center">
 				<Container>
-					<img src="/img/logo-menu.png" alt="icono" className="mx-auto w-[60px] md:w-[100px] mb-4 invert" />
-					<img src="/img/logotipo.png" className="mx-auto w-[150px] md:w-auto mb-10 invert" alt="Casa Raco" />
+					<img src="/img/logo-menu.png" alt="icono" className="mx-auto w-[50px] md:w-[100px] mb-4 invert" />
+					<img src="/img/logotipo.png" className="mx-auto w-[130px] md:w-auto mb-10 invert" alt="Casa Raco" />
 					<Newsletter />
 
 					<address style={{ fontStyle: "normal" }}>
 						<Text className="mb-6">Casa Raco Casa, C. Francisco I. Madero 99, Centro, 27980 Parras de la Fuente, Coah., México, Parras de la Fuente</Text>
 
-						<ul className="sm:flex sm:items-center sm:justify-center sm:gap-10">
+						<ul className="block sm:flex sm:items-center sm:justify-center sm:gap-10">
 							<li className="mb-4 sm:mb-0">
-								<Text>
-									<TbPhoneCall className="inline-block text-cafe" /> <a href="tel:+5218424239902">+52 1 842 423 9902</a>
-								</Text>
+								<TbPhoneCall className="inline-block text-cafe" />
+								<a href="tel:+5218424239902"> <Text> +52 1 842 423 9902 </Text> </a>
 							</li>
 							<li className="mb-4 sm:mb-0">
-								<Text>
-									<MdOutlineEmail className="inline-block text-cafe" />{" "}
-									<a className="underline" href="mailto:reservaciones@casaraco.mx">
-										reservaciones@casaraco.mx
-									</a>
-								</Text>
+								<MdOutlineEmail className="inline-block text-cafe" />{" "}
+								<a className="underline" href="mailto:reservaciones@casaraco.mx"><Text> reservaciones@casaraco.mx </Text> </a>
 							</li>
 							<li>
+								<FiFacebook className="inline-block text-cafe" />
+								<FaInstagram className="inline-block text-cafe" />
 								<Text>
-									<FiFacebook className="inline-block text-cafe" />
-									<FaInstagram className="inline-block text-cafe" /> @casa.raco
+									 @casa.raco
 								</Text>
 							</li>
 						</ul>

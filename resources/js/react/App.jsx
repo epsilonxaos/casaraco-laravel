@@ -1,6 +1,5 @@
 import { AnimatePresence } from "framer-motion";
 
-import ScrollToTop from "./components/ScrollToTop";
 import PageTransition from "./components/PageTransition";
 // import Loading from "./components/Loading";
 import Header from "./components/Header";
@@ -26,12 +25,13 @@ import { Toaster } from "sonner";
 export default function App() {
 	const location = useLocation();
 
+	console.log(import.meta.env.VITE_APP_URL)
+
 	// if (false) return <Loading />;
 
 	return (
 		<>
 			<Header />
-			<ScrollToTop />
 			<Toaster />
 			<AnimatePresence mode="wait">
 				<main>

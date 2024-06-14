@@ -40,6 +40,16 @@
                         <small>Las medidas recomendadas son 700 x 900 px, solo se aceptan .jpg, .jpeg, .webp y .png
                             con un maximo de peso de 1MB.</small>
                     </div>
+                    <div class="mb-3 w-full md:pr-3">
+                        <label for="portada" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><span
+                                class="text-red-800">*</span> Imagen de
+                            portada</label>
+                        <input type="file" name="portada" class="dropify" data-height="200" data-max-file-size="1M"
+                            data-allowed-file-extensions="jpg jpeg png webp"
+                            data-default-file="{{ asset($data->portada) }}" />
+                        <small>Las medidas recomendadas son 700 x 900 px, solo se aceptan .jpg, .jpeg, .webp y .png
+                            con un maximo de peso de 1MB.</small>
+                    </div>
                 </div>
                 <div class="w-full mb-10">
                     <h2 class="mb-2 font-semibold uppercase text-gray-900 text-base">Contenido</h2>

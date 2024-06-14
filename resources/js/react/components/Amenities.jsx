@@ -5,7 +5,7 @@ export const Amenities = () => {
 	const { t } = useTranslation();
 
 	return (
-		<ul className="flex flex-wrap lg:items-start md:justify-center lg:gap-8 mb-8">
+		<ul className="flex flex-wrap lg:items-start md:justify-center lg:gap-8 md:mb-8">
 			<li className="w-1/2 md:w-1/3 lg:w-1/5 xl:w-auto lg:mb-0 mb-8">
 				<img src="/img/icons/sala-juntas.svg" className="size-[42px] mb-3 object-contain block mx-auto" alt="Aire acondicionado" />
 				<Text className="text-black !leading-5">{t("amenidad.1")}</Text>

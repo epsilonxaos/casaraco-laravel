@@ -24,10 +24,10 @@ export const Experiences = () => {
 	if(data.length === 0) return ''
 
 	return (
-		<section className="py-10 lg:py-16 xl:pb-32 xl:pt-40">
+		<section className="py-7 md:py-10 lg:py-12">
 			<Container className="px-0">
 				<div className="grid grid-cols-1 md:grid-cols-3 md:items-center">
-					<div className="col-span-1 px-4 py-10 text-center lg:pr-10">
+					<div className="col-span-1 px-4 pt-0 pb-7 md:py-10 text-center lg:pr-10">
 						<div className="max-w-[350px] ml-auto">
 							<Text.TitleSections className="mb-3">{t("home.experience.title")}</Text.TitleSections>
 							<Text className="mb-5">{t("home.experience.desc")}</Text>
@@ -38,8 +38,8 @@ export const Experiences = () => {
 						</div>
 					</div>
 					<div className="col-span-1 md:col-span-2 grid grid-cols-2 gap-2 lg:gap-4 md:grid-cols-3">
-						{data.map((item) => 
-							<picture className="col-span-1">
+						{data.map((item, idx) => 
+							<picture className="col-span-1" key={"experiencie-picture-" +idx}>
 								<img src={_PATH_SOURCES + item.cover} className="h-[200px] md:h-[500px] lg:h-[650px] object-cover w-full" alt="experiencia 1" />
 							</picture>
 						)}

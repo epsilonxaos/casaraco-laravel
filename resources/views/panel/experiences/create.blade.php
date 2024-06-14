@@ -30,8 +30,17 @@
                     <div class="mb-3 w-full md:pr-3">
                         <label for="cover" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><span
                                 class="text-red-800">*</span> Imagen de
-                            portada</label>
+                            cover</label>
                         <input type="file" required name="cover" class="dropify" data-height="200"
+                            data-max-file-size="1M" data-allowed-file-extensions="jpg jpeg png webp" />
+                        <small>Las medidas recomendadas son 700 x 900 px, solo se aceptan .jpg, .jpeg, .webp y .png
+                            con un maximo de peso de 1MB.</small>
+                    </div>
+                    <div class="mb-3 w-full md:pr-3">
+                        <label for="portada" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><span
+                                class="text-red-800">*</span> Imagen de
+                            portada</label>
+                        <input type="file" required name="portada" class="dropify" data-height="200"
                             data-max-file-size="1M" data-allowed-file-extensions="jpg jpeg png webp" />
                         <small>Las medidas recomendadas son 700 x 900 px, solo se aceptan .jpg, .jpeg, .webp y .png
                             con un maximo de peso de 1MB.</small>
