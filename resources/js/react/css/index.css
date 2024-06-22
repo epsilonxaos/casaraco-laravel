@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.promo-modal {
+	background-image: url(/img/promo-movil.jpg);
+}
+
+@media screen and (min-width: 768px) {
+	.promo-modal {
+		background-image: url(/img/promo.jpg);
+	}
+}

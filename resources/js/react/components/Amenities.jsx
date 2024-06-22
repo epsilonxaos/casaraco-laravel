@@ -1,43 +1,101 @@
-import { useTranslation } from "react-i18next";
-import Text from "./Text";
+import { useTranslation } from 'react-i18next'
+import Text from './Text'
 
 export const Amenities = () => {
-	const { t } = useTranslation();
+	const { t } = useTranslation()
 
 	return (
-		<ul className="flex flex-wrap lg:items-start md:justify-center lg:gap-8 md:mb-8">
-			<li className="w-1/2 md:w-1/3 lg:w-1/5 xl:w-auto lg:mb-0 mb-8">
-				<img src="/img/icons/sala-juntas.svg" className="size-[42px] mb-3 object-contain block mx-auto" alt="Aire acondicionado" />
-				<Text className="text-black !leading-5">{t("amenidad.1")}</Text>
+		<ul className='mx-auto flex max-w-[900px] flex-wrap justify-center font-karla md:mb-8 md:justify-center lg:items-start'>
+			{/* Wifi */}
+			<li className='mb-8 w-1/3 lg:w-1/6'>
+				<img
+					src='/img/icons/wifi.svg'
+					className='mx-auto mb-3 block size-[42px] object-contain'
+					alt='Aire acondicionado'
+				/>
+				<Text className='!text-[12px] !leading-4 text-black'>Wifi</Text>
 			</li>
-			<li className="w-1/2 md:w-1/3 lg:w-1/5 xl:w-auto lg:mb-0 mb-8">
-				<img src="/img/icons/aire-ac.svg" className="size-[42px] mb-3 object-contain block mx-auto" alt="Aire acondicionado" />
-				<Text className="text-black !leading-5">{t("amenidad.2")}</Text>
+			{/* Aire AC */}
+			<li className='mb-8 w-1/3 lg:w-1/6'>
+				<img
+					src='/img/icons/aire-ac.svg'
+					className='mx-auto mb-3 block size-[42px] object-contain'
+					alt='Aire acondicionado'
+				/>
+				<Text className='!text-[12px] !leading-4 text-black'>{t('amenidad.2')}</Text>
 			</li>
-			<li className="w-1/2 md:w-1/3 lg:w-1/5 xl:w-auto lg:mb-0 mb-8">
-				<img src="/img/icons/desayuno.svg" className="size-[42px] mb-3 object-contain block mx-auto" alt="Aire acondicionado" />
-				<Text className="text-black !leading-5">{t("amenidad.3")}</Text>
+			{/* Desayuno */}
+			<li className='mb-8 w-1/3 lg:w-1/6'>
+				<img
+					src='/img/icons/desayuno.svg'
+					className='mx-auto mb-3 block size-[42px] object-contain'
+					alt='Aire acondicionado'
+				/>
+				<Text className='!text-[12px] !leading-4 text-black'>{t('amenidad.3')}</Text>
 			</li>
-			<li className="w-1/2 md:w-1/3 lg:w-1/5 xl:w-auto lg:mb-0 mb-8">
-				<img src="/img/icons/maquina-cafe.svg" className="size-[42px] mb-3 object-contain block mx-auto" alt="Aire acondicionado" />
-				<Text className="text-black !leading-5">{t("amenidad.4")}</Text>
+			{/* Tours */}
+			<li className='mb-8 w-1/3 lg:w-1/6'>
+				<img
+					src='/img/icons/tour.svg'
+					className='mx-auto mb-3 block size-[42px] object-contain'
+					alt='Aire acondicionado'
+				/>
+				<Text className='!text-[12px] !leading-4 text-black'>Tours</Text>
 			</li>
-			<li className="w-1/2 md:w-1/3 lg:w-1/5 xl:w-auto lg:mb-0 mb-8">
-				<img src="/img/icons/zona-jardin.svg" className="size-[42px] mb-3 object-contain block mx-auto" alt="Aire acondicionado" />
-				<Text className="text-black !leading-5">{t("amenidad.5")}</Text>
+			{/* jardin */}
+			<li className='mb-8 w-1/3 lg:w-1/6'>
+				<img
+					src='/img/icons/zona-jardin.svg'
+					className='mx-auto mb-3 block size-[42px] object-contain'
+					alt='Aire acondicionado'
+				/>
+				<Text className='!text-[12px] !leading-4 text-black'>{t('amenidad.5')}</Text>
 			</li>
-			<li className="w-1/2 md:w-1/3 lg:w-1/5 xl:w-auto lg:mb-0 mb-8">
-				<img src="/img/icons/comedor.svg" className="size-[42px] mb-3 object-contain block mx-auto" alt="Aire acondicionado" />
-				<Text className="text-black !leading-5">{t("amenidad.6")}</Text>
+			{/* Comedor */}
+			<li className='mb-8 w-1/3 lg:w-1/6'>
+				<img
+					src='/img/icons/comedor.svg'
+					className='mx-auto mb-3 block size-[42px] object-contain'
+					alt='Aire acondicionado'
+				/>
+				<Text className='!text-[12px] !leading-4 text-black'>{t('amenidad.6')}</Text>
 			</li>
-			<li className="w-1/2 md:w-1/3 lg:w-1/5 xl:w-auto md:mb-0 mb-8">
-				<img src="/img/icons/yoga.svg" className="size-[42px] mb-3 object-contain block mx-auto" alt="Aire acondicionado" />
-				<Text className="text-black !leading-5">{t("amenidad.7")}</Text>
+			{/* Bici */}
+			<li className='mb-8 w-1/3 lg:w-1/6'>
+				<img
+					src='/img/icons/bici.svg'
+					className='mx-auto mb-3 block size-[42px] object-contain'
+					alt='Aire acondicionado'
+				/>
+				<Text className='!text-[12px] !leading-4 text-black'>Free bike</Text>
 			</li>
-			<li className="w-1/2 md:w-1/3 lg:w-1/5 xl:w-auto md:mb-0 mb-8">
-				<img src="/img/icons/masaje.svg" className="size-[42px] mb-3 object-contain block mx-auto" alt="Aire acondicionado" />
-				<Text className="text-black !leading-5">{t("amenidad.8")}</Text>
+			{/* yoga */}
+			<li className='mb-8 w-1/3 lg:w-1/6'>
+				<img
+					src='/img/icons/yoga.svg'
+					className='mx-auto mb-3 block size-[42px] object-contain'
+					alt='Aire acondicionado'
+				/>
+				<Text className='!text-[12px] !leading-4 text-black'>{t('amenidad.7')}</Text>
+			</li>
+			{/* Masaje */}
+			<li className='mb-8 w-1/3 lg:w-1/6'>
+				<img
+					src='/img/icons/masaje.svg'
+					className='mx-auto mb-3 block size-[42px] object-contain'
+					alt='Aire acondicionado'
+				/>
+				<Text className='!text-[12px] !leading-4 text-black'>{t('amenidad.8')}</Text>
+			</li>
+			{/* Sala */}
+			<li className='mb-8 w-1/3 lg:w-1/6'>
+				<img
+					src='/img/icons/sala-juntas.svg'
+					className='mx-auto mb-3 block size-[42px] object-contain'
+					alt='Aire acondicionado'
+				/>
+				<Text className='!text-[12px] !leading-4 text-black'>{t('amenidad.1')}</Text>
 			</li>
 		</ul>
-	);
-};
+	)
+}

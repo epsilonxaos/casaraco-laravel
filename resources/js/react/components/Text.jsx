@@ -4,16 +4,16 @@ import React from "react";
 
 const Text = ({ children, className = "" }) => {
 	try {
-		return <p className={twMerge("text-inherit text-base md:text-lg lg:text-xl", className)}>{parse(children)}</p>;
+		return <p className={twMerge("text-inherit text-sm md:text-base lg:text-lg", className)}>{parse(children)}</p>;
 	} catch (error) {}
 };
 
 const Title = ({ children, className = "" }) => {
-	return <h1 className={twMerge("text-cafe uppercase text-xl md:text-2xl lg:text-3xl", className)}>{parse(children)}</h1>;
+	return <h1 className={twMerge("text-cafe font-karla font-light uppercase text-xl md:text-2xl lg:text-3xl", className)}>{parse(children)}</h1>;
 };
 
 const TitleSections = ({ children, className = "" }) => {
-	return <h2 className={twMerge("text-cafe uppercase text-xl md:text-2xl lg:text-3xl", className)}>{parse(children)}</h2>;
+	return <h2 className={twMerge("text-cafe font-light font-karla uppercase text-xl md:text-2xl lg:text-3xl", className)}>{parse(children)}</h2>;
 };
 
 Text.Title = Title;

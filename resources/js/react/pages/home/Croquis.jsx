@@ -1,31 +1,32 @@
-import { useTranslation } from "react-i18next";
-import { Container } from "../../components/Container";
-import Text from "../../components/Text";
-import { GiClick } from "react-icons/gi";
+import { useTranslation } from 'react-i18next'
+import { Container } from '../../components/Container'
+import Text from '../../components/Text'
+import { GiClick } from 'react-icons/gi'
 
 export const Croquis = () => {
-	const { t, i18n } = useTranslation();
+	const { t, i18n } = useTranslation()
 
 	return (
-		<section className="pt-10 lg:pt-12">
+		<section className='pt-10 lg:pt-12'>
 			<Container>
-				<div className="max-w-[660px] mx-auto text-center mb-8">
-					<Text.TitleSections className="lg:inline font-medium">{t("home.croquis.title")}</Text.TitleSections>
-					<Text className="lg:inline">{t("home.croquis.desc")}</Text>
+				<div className='mx-auto mb-8 max-w-[660px] text-center'>
+					<Text.TitleSections className='font-medium lg:inline'>{t('home.croquis.title')}</Text.TitleSections>
+					<Text>{t('home.croquis.desc')}</Text>
 				</div>
 			</Container>
 
-			<a href="https://www.google.com/maps/d/embed?mid=1Om9XTjhAbpwM18sVeAc-d3kyqazea5g&ehbc=2E312F" target="_blank" rel="noopener noreferrer" className="relative z-[1]">
-				<img src="/img/home/croquis.svg" alt="Ubicacion" className="bg-no-repeat bg-contain" style={{ backgroundImage: "url(/img/home/bg-croquis.png)" }} />
-			</a>
+			<iframe
+				src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14412.126238475403!2d-102.1834082!3d25.4372084!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868f4981fd0de3a1%3A0xec2fa781cffd6d21!2sCasa%20Raco%20Casa%2FHotel%20Boutique!5e0!3m2!1sen!2smx!4v1718676522696!5m2!1sen!2smx'
+				width='100%'
+				height='450'
+				allowFullScreen=''
+				loading='lazy'
+				referrerPolicy='no-referrer-when-downgrade'></iframe>
 
 			{/* //Todo Ajustar textos */}
-			<div className="relative mx-auto max-w-[600px] text-center py-3 px-4 md:px-10 z-[2] lg:-top-6">
-				<div className="mx-auto px-3 py-3 bg-cafe w-full max-w-max text-white ">
-					<GiClick className="inline" /> {i18n.language == 'es' ? 'Haz clic sobre el mapa para mas información' : 'Click on the map for more info'}
-				</div>
-				{/* <Text> C. Francisco I. Madero 99, Centro, 27980 Parras de la Fuente, Coah., México, Parras de la Fuente</Text> */}
+			<div className='relative z-[2] mx-auto max-w-[600px] bg-[#D6C0AC] px-4 py-3 text-center text-cafe md:px-10 lg:-top-6'>
+				<Text> C. Francisco I. Madero 99, Centro, 27980 Parras de la Fuente, Coah., México, Parras de la Fuente</Text>
 			</div>
 		</section>
-	);
-};
+	)
+}

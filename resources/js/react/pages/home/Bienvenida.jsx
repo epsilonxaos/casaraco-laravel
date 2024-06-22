@@ -1,29 +1,37 @@
-import { useTranslation } from "react-i18next";
-import { Amenities } from "../../components/Amenities";
-import Button from "../../components/Button";
-import { Container } from "../../components/Container";
-import Text from "../../components/Text";
+import { useTranslation } from 'react-i18next'
+import { Amenities } from '../../components/Amenities'
+import Button from '../../components/Button'
+import { Container } from '../../components/Container'
+import Text from '../../components/Text'
 
 export const Bienvenida = () => {
-	const { t } = useTranslation();
+	const { t } = useTranslation()
 
 	return (
-		<section className="text-center py-10 bg-no-repeat bg-cover bg-left-top" style={{ backgroundImage: "url(/img/home/bg-seccion2.jpg)" }}>
+		<section
+			className='bg-cover bg-left-top bg-no-repeat py-10 pb-16 text-center md:pb-24'
+			style={{ backgroundImage: 'url(/img/home/bg-seccion2.jpg)' }}>
 			<Container>
-				<img src="/img/logo-menu.png" alt="icono" className="mx-auto w-[45px] md:w-[100px] mb-4" />
+				<img
+					src='/img/logo-menu.png'
+					alt='icono'
+					className='mx-auto mb-4 w-[45px] md:w-[100px]'
+				/>
 
-				<Text.Title className="mb-5">{t("home.title")}</Text.Title>
+				<Text.Title className='mb-5'>{t('home.title')}</Text.Title>
 
-				<img src="/img/logotipo.png" className="mx-auto w-[150px] md:w-auto mb-10 " alt="Casa Raco" />
+				{/* <img src="/img/logotipo.png" className="mx-auto w-[150px] md:w-auto mb-10 " alt="Casa Raco" /> */}
 
-				<Text className="max-w-[850px] mx-auto mb-6">{t("home.desc")}</Text>
+				<Text className='mx-auto mb-6 max-w-[850px]'>{t('home.desc')}</Text>
 
 				<Amenities />
 
-				<Button.To url="/casa-raco" className="border-black text-black bg-transparent hover:bg-black hover:text-crema w-[141px] block mx-auto">
-					{t("verMas")}
+				<Button.To
+					url='/casa-raco'
+					className='mx-auto block w-[141px] border-black bg-transparent text-black hover:bg-black hover:text-crema'>
+					{t('verMas')}
 				</Button.To>
 			</Container>
 		</section>
-	);
-};
+	)
+}

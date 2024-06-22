@@ -19,8 +19,8 @@ module.exports = {
 				crema: "#fbf9f8",
 			},
 			fontFamily: {
-				cormorant: ["Cormorant Garamond", "sans-serif"],
-				instrumentSans: ["Instrument Sans", "sans-serif"],
+				karla: ["Karla", "sans-serif"],
+				AdobeGaramond: ["Adobe Garamond Pro", "sans-serif"]
 			},
 			boxShadow: {
 				card: "5px 5px 25px 0 rgba(0, 0, 0, 0.1)",

@@ -52,7 +52,7 @@ const Header = () => {
 					</Link>
 
 					<div className="relative">
-						<div className="flex items-center justify-center text-black absolute -left-[75px] font-instrumentSans font-sm">
+						<div className="flex items-center justify-center text-black absolute -left-[75px] font-karla font-sm">
 							<Language />
 						</div>
 						<Button.Link blank={false} url={"https://hotels.cloudbeds.com/reservation/aEkhze"}>
@@ -106,7 +106,7 @@ const Header = () => {
 						<Button.Link url={"https://hotels.cloudbeds.com/reservation/aEkhze"}>{t("bookNow")}</Button.Link>
 					</div> */}
 
-					<div className="flex pt-10 items-center justify-center text-black font-instrumentSans font-sm md:hidden">
+					<div className="flex pt-10 items-center justify-center text-black font-karla font-sm md:hidden">
 						<Language />
 					</div>
 

@@ -1,22 +1,22 @@
 @font-face {
-    font-family: 'Cormorant Garamond';
-    src: url('CormorantGaramond-Regular.woff2') format('woff2');
+    font-family: 'Karla';
+    src: url('Karla-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Cormorant Garamond';
-    src: url('CormorantGaramond-Bold.woff2') format('woff2');
-    font-weight: bold;
+    font-family: 'Karla';
+    src: url('Karla-Light.woff2') format('woff2');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Instrument Sans';
-    src: url('InstrumentSans-Regular.woff2') format('woff2');
+    font-family: 'Adobe Garamond Pro';
+    src: url('AGaramondPro-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

@@ -23,8 +23,8 @@ const Footer = () => {
 					<img src="/img/logotipo.png" className="mx-auto w-[130px] md:w-auto mb-10 invert" alt="Casa Raco" />
 					<Newsletter />
 
-					<address style={{ fontStyle: "normal" }}>
-						<Text className="mb-6">Casa Raco Casa, C. Francisco I. Madero 99, Centro, 27980 Parras de la Fuente, Coah., México, Parras de la Fuente</Text>
+					<address className="font-karla " style={{ fontStyle: "normal" }}>
+						<Text className="mb-6">C. Francisco I. Madero 99, Centro, 27980. Parras de la Fuente, Coahuila, México.</Text>
 
 						<ul className="block sm:flex sm:items-center sm:justify-center sm:gap-10">
 							<li className="mb-4 sm:mb-0">
@@ -47,7 +47,7 @@ const Footer = () => {
 				</Container>
 			</div>
 
-			<div className="bg-cafe py-5 font-instrumentSans">
+			<div className="bg-cafe py-5 font-karla">
 				<Container>
 					<ul className="mx-auto flex w-full flex-col items-center justify-between lg:justify-center relative text-xs md:flex-row lg:text-sm xl:text-base">
 						<li className="mb-0 lg:mb-0 lg:absolute lg:left-0">Casa Raco</li>

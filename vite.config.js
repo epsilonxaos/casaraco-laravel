@@ -13,17 +13,17 @@ export default defineConfig(({ command, mode }) => {
     console.log(`Server Host: ${host}`);
 
     return {
-        server: isProduction
-            ? false
-            : {
-                  host,
-                  port: 5174,
-                  hmr: { host },
-                  https: {
-                      key: readFileSync(env.SERVER_HTTPS_KEY),
-                      cert: readFileSync(env.SERVER_HTTPS_CERT),
-                  },
-              },
+        server: !isProduction
+            ? {
+				host,
+				port: 5174,
+				hmr: { host },
+				https: {
+					key: readFileSync(env.SERVER_HTTPS_KEY),
+					cert: readFileSync(env.SERVER_HTTPS_CERT),
+				},
+			}
+            : false ,
         plugins: [
             laravel({
                 input: [

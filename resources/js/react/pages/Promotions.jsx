@@ -43,12 +43,12 @@ export const Promotions = () => {
 					)}
 					{data && (
 						<PromotionCard cover={"/img/promociones/2.jpg"} blank={false} url={data?.url_habitaciones}>
-							<Text>{i18n.language == 'es' ? data?.desc_sala_es : data?.desc_sala_en}</Text>
+							<Text>{i18n.language == 'es' ? data?.desc_habitaciones_es : data?.desc_habitaciones_en}</Text>
 						</PromotionCard>
 					)}
 					{data && (
 						<PromotionCard cover={"/img/promociones/3.jpg"} url={data?.url_casa}>
-							<Text>{i18n.language == 'es' ? data?.desc_sala_es : data?.desc_sala_en}</Text>
+							<Text>{i18n.language == 'es' ? data?.desc_casa_es : data?.desc_casa_en}</Text>
 						</PromotionCard>
 					)}
 				</Container>
