@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { Banner } from '../components/Banner'
 import Text from '../components/Text'
 import { Bienvenida } from './home/Bienvenida'
@@ -11,12 +12,12 @@ import { Offers } from './home/Offers'
 import { Video } from './home/Video'
 
 export default function Home() {
+	const { t } = useTranslation()
+
 	return (
 		<>
 			<Video />
 			<Bienvenida />
-			{/* <Banner src={"/img/home/banner32.jpg"} className="md:hidden" /> */}
-			{/* <Banner src={"/img/home/banner3.jpg"} className="min-h-[275px] hidden md:block" /> */}
 			<Offers />
 			<Habitaciones />
 			<Croquis />
@@ -34,9 +35,7 @@ export default function Home() {
 				/>
 
 				<div className='absolute left-1/2 top-1/2 w-[90%] max-w-[500px] -translate-x-1/2 -translate-y-1/2 bg-cafe bg-opacity-80 py-3 text-center text-white'>
-					<Text className='mx-auto w-[80%] max-w-[400px]'>
-						Comienza tus días en Casa Raco con un delicioso desayuno preparado por nuestra talentosa cocinera Sandra.
-					</Text>
+					<Text className='mx-auto w-4/5 max-w-[400px]'>{t('text.add1')}</Text>
 				</div>
 			</section>
 

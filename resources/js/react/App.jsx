@@ -25,6 +25,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Button from './components/Button'
 import Text from './components/Text'
+import { MessageConsent } from './components/MessageConsent'
 
 export default function App() {
 	const location = useLocation()
@@ -124,7 +125,7 @@ export default function App() {
 					<ModalPromociones />
 				</main>
 			</AnimatePresence>
-
+			<MessageConsent />
 			<Footer />
 		</>
 	)

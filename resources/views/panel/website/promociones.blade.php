@@ -87,12 +87,12 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="desc_sala_es">Descripción Casa cuahuila</label>
+                                        for="desc_sala_es">Descripción Sala de juntas</label>
                                     <textarea name="desc_sala_es" class="trumbowyg-panel" cols="30" rows="3">{{ $data->desc_sala_es }}</textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="desc_habitaciones_es">Descripción Casa cuahuila</label>
+                                        for="desc_habitaciones_es">Descripción Habitaciones</label>
                                     <textarea name="desc_habitaciones_es" class="trumbowyg-panel" cols="30" rows="3">{{ $data->desc_habitaciones_es }}</textarea>
                                 </div>
 

@@ -20,10 +20,7 @@ export const Offers = () => {
 
 					<div className='col-span-1'>
 						<Text className='uppercase'>Concierge digital</Text>
-						<Text className='mx-auto w-[60%]'>
-							En Casa Raco estamos ansiosos por acompañarte a diseñar experiencias a tu medida para disfrutar lo mejor
-							de Parras de la Fuente.
-						</Text>
+						<Text className='mx-auto w-[60%]'>{t('text.add2')}</Text>
 					</div>
 				</div>
 
@@ -70,7 +67,7 @@ export const Offers = () => {
 				<div className='mx-auto grid w-[90%] max-w-[1300px] grid-cols-5'>
 					<picture className='col-span-3'>
 						<img
-							className='mx-auto block h-full w-full object-cover'
+							className='mx-auto block size-full object-cover'
 							src='/img/home/banner-promociones.jpg'
 							alt='Banner promociones'
 						/>
