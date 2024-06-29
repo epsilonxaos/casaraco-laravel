@@ -9,7 +9,7 @@ export const Bienvenida = () => {
 
 	return (
 		<section
-			className='bg-cover bg-left-top bg-no-repeat py-10 pb-16 text-center md:pb-24'
+			className='bg-cover bg-left-top bg-no-repeat py-10 pb-10 text-center md:pb-24'
 			style={{ backgroundImage: 'url(/img/home/bg-seccion2.jpg)' }}>
 			<Container>
 				<img

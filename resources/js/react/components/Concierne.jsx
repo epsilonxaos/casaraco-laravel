@@ -26,7 +26,7 @@ const Movil = () => {
 	const { t } = useTranslation()
 
 	return (
-		<div className='bg-[#f0eeed] px-5'>
+		<div className='px-5'>
 			<div className='relative bg-cafe pt-12 text-center text-white'>
 				<div className='col-span-1 px-6'>
 					<Text className='uppercase'>Concierge digital</Text>
@@ -39,7 +39,7 @@ const Movil = () => {
 						className='relative top-[35px] mx-auto w-[70px]'
 					/>
 
-					<div className='h-16 w-full bg-[#f0eeed]'></div>
+					<div className='h-16 w-full bg-white'></div>
 				</picture>
 			</div>
 		</div>

@@ -18,6 +18,7 @@ export default function Home() {
 		<>
 			<Video />
 			<Bienvenida />
+			<hr className='mx-auto mb-10 w-[90%] border-t border-t-cafe md:hidden' />
 			<Offers />
 			<Habitaciones />
 
