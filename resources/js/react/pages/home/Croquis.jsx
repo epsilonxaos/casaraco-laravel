@@ -1,15 +1,22 @@
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../components/Container'
 import Text from '../../components/Text'
-import { GiClick } from 'react-icons/gi'
+import { IoStar } from 'react-icons/io5'
 
 export const Croquis = () => {
 	const { t, i18n } = useTranslation()
 
 	return (
-		<section className='pt-10 lg:pt-12'>
+		<section className='py-10 lg:pt-12'>
 			<Container>
 				<div className='mx-auto mb-8 max-w-[660px] text-center'>
+					<div className='mb-2 flex items-center justify-center gap-1'>
+						<IoStar size={22} />
+						<IoStar size={22} />
+						<IoStar size={22} />
+						<IoStar size={22} />
+						<IoStar size={22} />
+					</div>
 					<Text.TitleSections className='font-medium lg:inline'>{t('home.croquis.title')}</Text.TitleSections>
 					<Text>{t('home.croquis.desc')}</Text>
 				</div>
@@ -22,11 +29,6 @@ export const Croquis = () => {
 				allowFullScreen=''
 				loading='lazy'
 				referrerPolicy='no-referrer-when-downgrade'></iframe>
-
-			{/* //Todo Ajustar textos */}
-			<div className='relative z-[2] mx-auto max-w-[600px] bg-[#D6C0AC] px-4 py-3 text-center text-cafe md:px-10 lg:-top-6'>
-				<Text> C. Francisco I. Madero 99, Centro, 27980 Parras de la Fuente, Coah., México, Parras de la Fuente</Text>
-			</div>
 		</section>
 	)
 }
