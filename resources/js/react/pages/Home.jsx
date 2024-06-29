@@ -20,7 +20,6 @@ export default function Home() {
 			<Bienvenida />
 			<Offers />
 			<Habitaciones />
-			<Croquis />
 
 			<section className='relative md:pb-20 md:pt-10'>
 				<img
@@ -43,6 +42,7 @@ export default function Home() {
 			<Gastronomy />
 			<Boardroom />
 			<Coahuila />
+			<Croquis />
 		</>
 	)
 }
