@@ -6,6 +6,7 @@ use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComandosController;
 use App\Http\Controllers\ExperiencesController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\WebsiteController;
 
 /*
@@ -81,6 +82,11 @@ Route::middleware(['auth:admin', 'verified'])->prefix('/admin')->group(function 
 	Route::prefix('/website')->group(function () {
 		Route::get('{seccion}/edit', [WebsiteController::class, 'edit'])->name('panel.website.edit');
 		Route::put('{seccion}/update', [WebsiteController::class, 'update'])->name('panel.website.update');
+	});
+
+	Route::prefix('/newsletter')->group(function () {
+		Route::get('/', [NewsletterController::class, 'index'])->name('panel.newsletter.index');
+		Route::get('/export', [NewsletterController::class, 'export'])->name('panel.newsletter.export');
 	});
 
 	Route::prefix('/experiences')->group(function () {

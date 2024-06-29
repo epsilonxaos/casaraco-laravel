@@ -149,17 +149,20 @@ const ModalPromociones = () => {
 			<div
 				onClick={ev => {
 					ev.stopPropagation()
-					ev.preventDefault()
 				}}
 				className='promo-modal relative flex h-[561px] w-[90%] max-w-[315px] items-end justify-center bg-cover bg-center py-4 md:h-[485px] md:max-w-4xl'>
 				<div className='absolute top-[45%] w-full -translate-y-1/2 px-4 text-center md:px-14 md:text-left'>
 					<Text className='uppercase'>{t('modal.titulo')}</Text>
 					<Text.TitleSections className='mb-4 max-w-[350px] uppercase'>{t('modal.desc')}</Text.TitleSections>
-					<Button className='bg-transparent'>{t('bookNow')}</Button>
+					<Button.Link
+						url={'https://hotels.cloudbeds.com/reservation/aEkhze'}
+						className='bg-transparent'>
+						{t('bookNow')}
+					</Button.Link>
 				</div>
 
 				<button
-					className='font-bold underline'
+					className='rounded-md bg-cafe font-bold underline'
 					onClick={() => setOpen(false)}>
 					{t('header.close')}
 				</button>

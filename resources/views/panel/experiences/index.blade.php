@@ -12,8 +12,6 @@
                 </svg>
                 Nueva
             </a>
-            {{-- @can(PermissionKey::Socios['permissions']['create']['name'])
-            @endcan --}}
 
             <div class="hidden text-blue-600 dark:text-blue-500"></div>
             <div class="hidden text-emerald-600 dark:text-emerald-500"></div>
@@ -23,7 +21,3 @@
         @livewire('experiences-table')
     </div>
 @endsection
-
-{{-- @push('script')
-    {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
-@endpush --}}
