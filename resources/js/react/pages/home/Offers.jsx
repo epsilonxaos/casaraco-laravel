@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import Button from '../../components/Button'
-import { Container } from '../../components/Container'
 import Text from '../../components/Text'
+import Concierne from '../../components/Concierne'
 
 export const Offers = () => {
 	const { t } = useTranslation()
@@ -9,20 +9,7 @@ export const Offers = () => {
 	return (
 		<section className=''>
 			<div className='md:hidden'>
-				<div className='relative bg-cafe py-6 pt-12 text-center text-white'>
-					<picture className='absolute -top-[35px] left-1/2 col-span-1 mx-auto -translate-x-1/2'>
-						<img
-							src='/img/home/sello2.svg'
-							alt=''
-							className='w-[70px]'
-						/>
-					</picture>
-
-					<div className='col-span-1'>
-						<Text className='uppercase'>Concierge digital</Text>
-						<Text className='mx-auto w-[60%]'>{t('text.add2')}</Text>
-					</div>
-				</div>
+				<Concierne.Movil />
 
 				<img
 					src='/img/home/promos2.jpg'
@@ -46,23 +33,7 @@ export const Offers = () => {
 			</div>
 
 			<div className='relative z-[1] hidden py-8 pt-0 md:block md:py-16'>
-				<div className='relative -top-28 mx-auto flex w-[80%] max-w-[950px] items-center justify-center gap-2 bg-cafe px-12 py-3 text-center text-white'>
-					<picture className='col-span-1'>
-						<img
-							src='/img/home/sello2.svg'
-							alt=''
-							className='w-[70px]'
-						/>
-					</picture>
-
-					<div className='col-span-4'>
-						<Text className='uppercase'>Concierge digital</Text>
-						<Text className='mx-auto '>
-							En Casa Raco estamos ansiosos por acompañarte a diseñar experiencias a tu medida para disfrutar lo mejor
-							de Parras de la Fuente.
-						</Text>
-					</div>
-				</div>
+				<Concierne />
 
 				<div className='mx-auto grid w-[90%] max-w-[1300px] grid-cols-5'>
 					<picture className='col-span-3'>
