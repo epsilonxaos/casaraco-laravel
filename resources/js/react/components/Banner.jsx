@@ -1,9 +1,15 @@
-import { twMerge } from "tailwind-merge";
+import { twMerge } from 'tailwind-merge'
 
-export const Banner = ({ src, className = "" }) => {
+export const Banner = ({ src, className = '', children }) => {
 	return (
-		<section>
-			<img src={src} alt="Banner seccion" className={twMerge("h-auto w-full max-h-[645px] object-cover object-center", className)} />
+		<section className='relative'>
+			<img
+				src={src}
+				alt='Banner seccion'
+				className={twMerge('h-auto max-h-[645px] w-full object-cover object-center', className)}
+			/>
+
+			{children}
 		</section>
-	);
-};
+	)
+}
