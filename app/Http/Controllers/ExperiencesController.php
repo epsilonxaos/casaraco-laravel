@@ -56,12 +56,9 @@ class ExperiencesController extends Controller
 	{
 
 		$cover = Helpers::addFileStorage($request->file('cover'), $this->directorio);
-		$portada = Helpers::addFileStorage($request->file('cover'), $this->directorio);
+		$portada = Helpers::addFileStorage($request->file('portada'), $this->directorio);
 		$p = Experiences::create([
 			'cover' => $cover,
-			'status' => 1
-		]);
-		$p = Experiences::create([
 			'portada' => $portada,
 			'status' => 1
 		]);
@@ -146,6 +143,7 @@ class ExperiencesController extends Controller
 	public function destroy(Int $id)
 	{
 		Helpers::deleteFileStorage('experiences', 'cover', $id);
+		Helpers::deleteFileStorage('experiences', 'portada', $id);
 		Experiences::where('id', $id)->delete();
 
 		return redirect()->back()->with('success', 'El registro se ha eliminado correctamente');

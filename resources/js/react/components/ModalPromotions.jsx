@@ -4,7 +4,7 @@ import Text from './Text'
 import Button from './Button'
 
 export const ModalPromotions = () => {
-	const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(true)
 	const { t } = useTranslation()
 
 	useEffect(() => {

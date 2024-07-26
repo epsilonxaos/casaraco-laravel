@@ -21,7 +21,7 @@ const Concierne = ({ className }) => {
 
 			<div className='w-full'>
 				{/* <Text className='uppercase'>Concierge digital</Text> */}
-				<Text className='mx-auto '>{t('text.add2')}</Text>
+				<Text className='mx-auto '>{t('text.add.concierne.small')}</Text>
 			</div>
 		</div>
 	)
@@ -35,7 +35,15 @@ const Movil = () => {
 			<div className='relative bg-cafe pt-12 text-center text-white'>
 				<div className='col-span-1 px-6'>
 					<Text className='uppercase'>Concierge digital</Text>
-					<Text className='mx-auto'>{t('text.add2')}</Text>
+					<Text className='mx-auto'>{t('text.add.concierne.small')}</Text>
+
+					<a
+						className='mx-auto mt-6 block min-w-[80px] max-w-[170px] rounded-xl border-2 border-cafe bg-crema px-4 py-2 text-xs uppercase text-cafe transition-colors md:min-w-[120px] md:py-3 md:text-sm lg:text-base xl:min-w-[140px]'
+						href='https://wa.me/+18553409046'
+						target='_blank'
+						rel='noopener noreferrer'>
+						{t('masInfo2')}
+					</a>
 				</div>
 				<picture className='relative col-span-1'>
 					<img

@@ -8,13 +8,14 @@ import { Habitaciones } from './home/Habitaciones'
 import { Offers } from './home/Offers'
 import { Video } from './home/Video'
 import { Sandra } from './home/Sandra'
+import { Concierne } from './home/Concierne'
 
 export default function Home() {
 	return (
 		<>
 			<Video />
 			<Bienvenida />
-			<hr className='mx-auto mb-10 w-[90%] border-t border-t-cafe md:hidden' />
+			<Concierne />
 			<Offers />
 			<Habitaciones />
 
@@ -22,6 +23,7 @@ export default function Home() {
 
 			<hr className='mx-auto my-10 w-[90%] border-t border-t-cafe md:hidden' />
 			<Experiences />
+			<hr className='mx-auto mb-10 w-[90%] border-t border-t-cafe md:hidden' />
 			<Gastronomy />
 			<hr className='mx-auto mb-10 w-[90%] border-t border-t-cafe md:hidden' />
 			<Boardroom />

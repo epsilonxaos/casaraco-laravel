@@ -9,8 +9,8 @@ export const Sandra = () => {
 			<div className='mx-auto grid w-[90%] grid-cols-2 border border-cafe p-4 md:grid-cols-3'>
 				<div className='order-1 col-span-1 md:order-1'>
 					<img
-						src='/img/home/sandra.jpg'
-						className='h-[450px] object-cover'
+						src='/img/home/sandra1.jpg'
+						className='h-[450px] w-full object-cover md:h-[550px]'
 						alt=''
 					/>
 				</div>
@@ -27,8 +27,8 @@ export const Sandra = () => {
 				</div>
 				<div className='order-2 col-span-1 md:order-3'>
 					<img
-						src='/img/home/sandra.jpg'
-						className='h-[450px] object-cover'
+						src='/img/home/sandra2.jpg'
+						className='h-[450px] w-full object-cover md:h-[550px]'
 						alt=''
 					/>
 				</div>

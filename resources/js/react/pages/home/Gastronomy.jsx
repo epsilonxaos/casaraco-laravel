@@ -17,7 +17,7 @@ export const Gastronomy = () => {
 
 			<div
 				className='col-span-1 flex min-h-[250px] items-center bg-cover bg-right-bottom bg-no-repeat px-4 py-0 text-center md:min-h-[350px] md:py-20'
-				style={{ backgroundImage: 'url(/img/home/bg-gastro.jpg)' }}>
+				style={{ backgroundImage: 'url(/img/home/bg-gastro.jpg?v=1)' }}>
 				<div className='mx-auto max-w-[460px]'>
 					<Text.TitleSections className='mb-3'>{t('home.gastronomy.title')}</Text.TitleSections>
 					<Text className='mb-5'>{t('home.gastronomy.desc')}</Text>

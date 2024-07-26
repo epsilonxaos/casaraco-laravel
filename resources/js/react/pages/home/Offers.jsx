@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Button from '../../components/Button'
 import Text from '../../components/Text'
-import Concierne from '../../components/Concierne'
 
 export const Offers = () => {
 	const { t } = useTranslation()
@@ -10,8 +9,6 @@ export const Offers = () => {
 		<section className=''>
 			{/* //* Version movil */}
 			<div className='md:hidden'>
-				<Concierne.Movil />
-
 				<div className='bg-cafe px-5 pt-12'>
 					<img
 						src='/img/home/promos2.jpg'
@@ -37,8 +34,6 @@ export const Offers = () => {
 
 			{/* //* Version Escritorio */}
 			<div className='relative z-[1] hidden py-8 pt-0 md:block md:py-16'>
-				<Concierne />
-
 				<div className='relative mx-auto max-w-[1300px]'>
 					<picture>
 						<img

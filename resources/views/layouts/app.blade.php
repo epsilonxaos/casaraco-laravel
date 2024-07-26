@@ -14,8 +14,13 @@
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/react/index.jsx'])
 </head>
 
-<body class="bg-crema font-AdobeGaramond  pt-[52px] md:pt-[76px] text-cafe">
+<body class="bg-crema font-AdobeGaramond  pt-[52px] md:pt-[64px] text-cafe">
+
     <div id="root" class=""></div>
+
+    <script type="text/javascript"
+        src="https://static1.cloudbeds.com/booking-engine-immersive-experience/latest/cloudbeds-immersive-experience.js">
+    </script>
 </body>
 
 </html>

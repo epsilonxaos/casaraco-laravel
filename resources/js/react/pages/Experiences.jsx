@@ -8,11 +8,12 @@ import { useEffect, useState } from 'react'
 import { _PATH_API, _PATH_SOURCES } from '../constants/constants'
 import Concierne from '../components/Concierne'
 import axios from 'axios'
+import Skeleton from 'react-loading-skeleton'
 
 export const Experiences = () => {
 	const { t, i18n } = useTranslation()
 
-	const [data, setData] = useState([])
+	const [data, setData] = useState(false)
 
 	useEffect(() => {
 		async function fetchData() {
@@ -30,8 +31,6 @@ export const Experiences = () => {
 		}
 		fetchData()
 	}, [])
-
-	// if(data.length === 0) return ''
 
 	return (
 		<>
@@ -51,14 +50,30 @@ export const Experiences = () => {
 					<Text className='mx-auto mb-10 max-w-[860px]'>{t('experiences.desc')}</Text>
 
 					<div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-						{data.map(item => (
-							<CardExperience
-								key={'experiencias-' + item.id}
-								cover={_PATH_SOURCES + item.cover}
-								title={item[i18n.language].title}
-								url={_PATH_API + 'experiencias/' + item.id}
-							/>
-						))}
+						{data === false
+							? [1, 2, 3, 4, 5, 6].map(item => (
+									<div
+										className='col-span-1 pb-6 lg:pb-10'
+										key={'skeleton-card-' + item}>
+										<div className='max-w-[460px] shadow-card'>
+											<div className='mb-6'>
+												<Skeleton height={300} />
+											</div>
+
+											<div className='px-4 pb-4'>
+												<Skeleton count={4} />
+											</div>
+										</div>
+									</div>
+								))
+							: data.map(item => (
+									<CardExperience
+										key={'experiencias-' + item.id}
+										cover={_PATH_SOURCES + item.cover}
+										title={item[i18n.language].title}
+										url={_PATH_API + 'experiencias/' + item.id}
+									/>
+								))}
 					</div>
 				</Container>
 			</section>

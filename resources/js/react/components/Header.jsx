@@ -3,6 +3,7 @@ import Button from './Button'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import '../css/btnMenu.css'
+import ButtonCloudbed from './ButtonCloudbed'
 
 const Language = () => {
 	const { i18n } = useTranslation()
@@ -72,15 +73,12 @@ const Header = () => {
 						/>
 					</Link>
 
-					<div className='relative'>
+					<div className='relative flex items-center'>
 						<div className='font-sm absolute -left-[75px] flex items-center justify-center font-karla text-black'>
 							<Language />
 						</div>
-						<Button.Link
-							blank={false}
-							url={'https://hotels.cloudbeds.com/reservation/aEkhze'}>
-							{t('bookNow')}
-						</Button.Link>
+
+						<ButtonCloudbed />
 					</div>
 				</div>
 			</header>

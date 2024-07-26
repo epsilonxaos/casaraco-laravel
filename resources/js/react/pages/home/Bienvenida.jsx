@@ -26,11 +26,11 @@ export const Bienvenida = () => {
 
 				<Amenities />
 
-				<Button.To
+				{/* <Button.To
 					url='/casa-raco'
 					className='mx-auto block w-[141px] border-black bg-transparent text-black hover:bg-black hover:text-crema'>
 					{t('verMas')}
-				</Button.To>
+				</Button.To> */}
 			</Container>
 		</section>
 	)

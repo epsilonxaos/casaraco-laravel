@@ -9,7 +9,7 @@ export const Gastronomy = () => {
 
 	return (
 		<>
-			<Banner src={'/img/gastronomy/banner.jpg'}>
+			<Banner src={'/img/gastronomy/banner.jpg?v=23'}>
 				<div className='absolute bottom-[-60px] hidden w-full md:block'>
 					<Concierne className={'top-0'} />
 				</div>
@@ -28,7 +28,7 @@ export const Gastronomy = () => {
 						<Text>{t('gastronomy.text2')}</Text>
 					</>
 				}
-				cover={'/img/gastronomy/foto.jpg'}
+				cover={'/img/gastronomy/foto.jpg?v=32'}
 				bg={'/img/gastronomy/bg.jpg'}
 				main={
 					<>

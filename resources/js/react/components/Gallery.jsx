@@ -8,7 +8,7 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/effect-fade'
 
-const galeria = [1, 2, 3, 4, 5, 6, 7, 8]
+const galeria = [2, 3, 4, 5, 6, 7, 8]
 
 export const Gallery = () => {
 	return (

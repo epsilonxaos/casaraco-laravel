@@ -1,10 +1,14 @@
+import { twMerge } from 'tailwind-merge'
 import { Container } from './Container'
 
-export const SectionBrownAndWhite = ({ header, main, footer, cover, bg }) => {
+export const SectionBrownAndWhite = ({ header, main, footer, cover, bg, className }) => {
 	return (
 		<section className=''>
 			<div
-				className='relative bg-crema bg-cover bg-top bg-no-repeat pt-10 bg-blend-darken max-md:!bg-none md:pt-24 xl:pt-24'
+				className={twMerge(
+					'relative bg-crema bg-cover bg-top bg-no-repeat pt-10 bg-blend-darken max-md:!bg-none md:pt-24 xl:pt-24',
+					className
+				)}
 				style={{ backgroundImage: 'url(' + bg + ')' }}>
 				<Container className='max-w-6xl text-center'>
 					{header}
@@ -22,7 +26,7 @@ export const SectionBrownAndWhite = ({ header, main, footer, cover, bg }) => {
 						</div>
 					</div>
 
-					<div className='bottom-0 left-0 -z-10 hidden h-[40px] w-full bg-cafe md:absolute md:block'></div>
+					<div className='bottom-[-10px] left-0 -z-10 hidden h-[40px] w-full bg-cafe md:absolute md:block'></div>
 				</Container>
 			</div>
 

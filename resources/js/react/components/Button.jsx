@@ -1,40 +1,64 @@
-import { twMerge } from "tailwind-merge";
-import { Link as LinkR } from "react-router-dom";
+import { twMerge } from 'tailwind-merge'
+import { Link as LinkR } from 'react-router-dom'
 
-const Button = ({ children, onClick, className = "" }) => {
+const Button = ({ children, onClick, className = '' }) => {
 	return (
-		<button {...(onClick && { onClick })} type="button" className={twMerge("md:py-3 py-2 uppercase bg-crema border-2 px-4 min-w-[80px] md:min-w-[120px] lg:min-w-[140px] text-xs md:text-sm lg:text-base border-cafe rounded-xl text-cafe hover:bg-cafe hover:text-white transition-colors", className)}>
+		<button
+			{...(onClick && { onClick })}
+			type='button'
+			className={twMerge(
+				'min-w-[80px] rounded-xl border-2 border-cafe bg-crema px-4 py-2 text-xs uppercase text-cafe transition-colors hover:bg-cafe hover:text-white md:min-w-[120px] md:text-sm lg:min-w-[140px] ',
+				className
+			)}>
 			{children}
 		</button>
-	);
-};
+	)
+}
 
-const ButtonCafe = ({ children, onClick, className = "" }) => {
+const ButtonCafe = ({ children, onClick, className = '' }) => {
 	return (
-		<button {...(onClick && { onClick })} type="button" className={twMerge("md:py-3 py-2 uppercase bg-cafe border-2 px-4 min-w-[80px] md:min-w-[120px] xl:min-w-[140px] text-xs md:text-sm lg:text-base border-cafe rounded-xl text-white hover:bg-crema hover:text-cafe transition-colors", className)}>
+		<button
+			{...(onClick && { onClick })}
+			type='button'
+			className={twMerge(
+				'min-w-[80px] rounded-xl border-2 border-cafe bg-cafe px-4 py-2 text-xs uppercase text-white transition-colors hover:bg-crema hover:text-cafe md:min-w-[120px] md:text-sm  xl:min-w-[140px]',
+				className
+			)}>
 			{children}
 		</button>
-	);
-};
+	)
+}
 
 const Link = ({ children, url, className, blank = true }) => {
 	return (
-		<a className={twMerge("md:py-3 py-2 uppercase bg-crema border-2 px-4 min-w-[80px] md:min-w-[120px] xl:min-w-[140px] text-xs md:text-sm lg:text-base border-cafe rounded-xl text-cafe hover:bg-cafe hover:text-white transition-colors", className)} href={url} {...(blank && { target: "_blank" })} rel="noopener noreferrer">
+		<a
+			className={twMerge(
+				'min-w-[80px] rounded-xl border-2 border-cafe bg-crema px-4 py-2 text-xs uppercase text-cafe transition-colors hover:bg-cafe hover:text-white md:min-w-[120px] md:text-sm  xl:min-w-[140px]',
+				className
+			)}
+			href={url}
+			{...(blank && { target: '_blank' })}
+			rel='noopener noreferrer'>
 			{children}
 		</a>
-	);
-};
+	)
+}
 
-const To = ({ url = "", children, className = "" }) => {
+const To = ({ url = '', children, className = '' }) => {
 	return (
-		<LinkR to={url} className={twMerge("md:py-3 py-2 uppercase bg-crema border-2 px-4 min-w-[80px] md:min-w-[120px] lg:min-w-[140px] text-xs md:text-sm lg:text-base border-cafe rounded-xl text-cafe hover:bg-cafe hover:text-white transition-colors", className)}>
+		<LinkR
+			to={url}
+			className={twMerge(
+				'min-w-[80px] rounded-xl border-2 border-cafe bg-crema px-4 py-2 text-xs uppercase text-cafe transition-colors hover:bg-cafe hover:text-white md:min-w-[120px] md:text-sm lg:min-w-[140px] ',
+				className
+			)}>
 			{children}
 		</LinkR>
-	);
-};
+	)
+}
 
-Button.Cafe = ButtonCafe;
-Button.Link = Link;
-Button.To = To;
+Button.Cafe = ButtonCafe
+Button.Link = Link
+Button.To = To
 
-export default Button;
+export default Button
