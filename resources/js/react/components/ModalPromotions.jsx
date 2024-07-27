@@ -2,17 +2,31 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Text from './Text'
 import Button from './Button'
+import { _PATH_API } from '../constants/constants'
+import axios from 'axios'
 
 export const ModalPromotions = () => {
 	const [open, setOpen] = useState(true)
 	const { t } = useTranslation()
+	const [data, setData] = useState()
 
 	useEffect(() => {
 		if (open) document.querySelector('body').classList.add('overflow-hidden')
 		else document.querySelector('body').classList.remove('overflow-hidden')
 	}, [open])
 
+	useEffect(() => {
+		async function fetchData() {
+			const response = await axios.get(_PATH_API + 'api/website')
+
+			setData(response.data)
+		}
+		fetchData()
+	}, [])
+
 	if (!open) return
+
+	if (!data) return
 
 	return (
 		<div
@@ -22,12 +36,13 @@ export const ModalPromotions = () => {
 				onClick={ev => {
 					ev.stopPropagation()
 				}}
-				className='promo-modal relative flex h-[561px] w-[90%] max-w-[315px] items-end justify-center bg-cover bg-center py-4 md:h-[485px] md:max-w-4xl'>
+				className='promo-modal relative flex h-[561px] w-[90%] max-w-[315px] items-end justify-center bg-cover bg-center py-4 md:h-[485px] md:max-w-4xl'
+				style={{ backgroundImage: `url(${data.cover_popup})` }}>
 				<div className='absolute top-[45%] w-full -translate-y-1/2 px-4 text-center md:px-14 md:text-left'>
-					<Text className='uppercase'>{t('modal.titulo')}</Text>
-					<Text.TitleSections className='mb-4 max-w-[350px] uppercase'>{t('modal.desc')}</Text.TitleSections>
+					<Text className='uppercase'>{data.title_popup}</Text>
+					<Text.TitleSections className='mb-4 max-w-[350px] uppercase'>{data.desc_popup}</Text.TitleSections>
 					<Button.Link
-						url={'https://hotels.cloudbeds.com/reservation/aEkhze'}
+						url={data.link_popup}
 						className='bg-transparent'>
 						{t('bookNow')}
 					</Button.Link>

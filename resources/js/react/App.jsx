@@ -24,26 +24,9 @@ import { Toaster } from 'sonner'
 
 import { MessageConsent } from './components/MessageConsent'
 import { ModalPromotions } from './components/ModalPromotions'
-import { useScript } from '@uidotdev/usehooks'
 
 export default function App() {
 	const location = useLocation()
-
-	// useEffect(() => {
-	// 	const script = document.createElement('script')
-
-	// 	script.src =
-	// 		'https://static1.cloudbeds.com/booking-engine-immersive-experience/latest/cloudbeds-immersive-experience.min.js'
-	// 	script.async = true
-
-	// 	document.body.appendChild(script)
-
-	// 	return () => {
-	// 		document.body.removeChild(script)
-	// 	}
-	// }, [])
-
-	// if (false) return <Loading />;
 
 	return (
 		<>

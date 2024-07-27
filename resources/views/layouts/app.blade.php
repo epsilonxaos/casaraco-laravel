@@ -10,6 +10,12 @@
 
     @include('layouts.modules.metas')
 
+    <style>
+        strong {
+            font-weight: bold !important
+        }
+    </style>
+
     @viteReactRefresh
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/react/index.jsx'])
 </head>

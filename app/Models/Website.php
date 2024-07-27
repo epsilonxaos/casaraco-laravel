@@ -21,5 +21,10 @@ class Website extends Model
 		"desc_sala_en",
 		"desc_habitaciones_es",
 		"desc_habitaciones_en",
+
+		"cover_popup",
+		"title_popup",
+		"desc_popup",
+		"link_popup",
 	];
 }
