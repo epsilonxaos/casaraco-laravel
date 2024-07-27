@@ -46,12 +46,7 @@ const Header = () => {
 					</Link>
 
 					<div className='flex items-center'>
-						<Button.Link
-							className={'scale-90 py-2 text-xs'}
-							blank={false}
-							url={'https://hotels.cloudbeds.com/reservation/aEkhze'}>
-							{t('bookNow')}
-						</Button.Link>
+						<ButtonCloudbed />
 						<button
 							className={`menu menu-3 ${open ? 'active' : ''}`}
 							onClick={() => setOpen(!open)}>
