@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.promo-modal {
+/* .promo-modal {
 	background-image: url(/img/promo-movil.jpg);
 }
 
@@ -10,4 +10,4 @@
 	.promo-modal {
 		background-image: url(/img/promo.jpg);
 	}
-}
+} */

@@ -49,6 +49,12 @@ class WebsiteController extends Controller
 			$upd->cover_popup = $cover_popup;
 			$upd->save();
 		}
+		if ($request->hasFile('movil_popup')) {
+			Helpers::deleteFileStorage('websites', 'movil_popup', 1);
+			$movil_popup = Helpers::addFileStorage($request->file('movil_popup'), $this->directorio);
+			$upd->movil_popup = $movil_popup;
+			$upd->save();
+		}
 
 		if ($request->has('url_casa')) $upd->url_casa = $request->url_casa;
 		if ($request->has('url_sala')) $upd->url_sala = $request->url_sala;

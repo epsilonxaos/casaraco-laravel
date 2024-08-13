@@ -36,10 +36,21 @@
                             <label for="cover_popup"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><span
                                     class="text-red-800">*</span> Imagen de
-                                fondo</label>
+                                fondo (Escritorio)</label>
                             <input type="file" name="cover_popup" class="dropify" data-height="200"
                                 data-max-file-size="1M" data-allowed-file-extensions="jpg jpeg png webp"
                                 data-default-file="{{ asset($data->cover_popup) }}" />
+                            <small>Las medidas recomendadas son 700 x 900 px, solo se aceptan .jpg, .jpeg, .webp y .png
+                                con un maximo de peso de 1MB.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="movil_popup"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><span
+                                    class="text-red-800">*</span> Imagen de
+                                fondo (Movil)</label>
+                            <input type="file" name="movil_popup" class="dropify" data-height="200"
+                                data-max-file-size="1M" data-allowed-file-extensions="jpg jpeg png webp"
+                                data-default-file="{{ asset($data->movil_popup) }}" />
                             <small>Las medidas recomendadas son 700 x 900 px, solo se aceptan .jpg, .jpeg, .webp y .png
                                 con un maximo de peso de 1MB.</small>
                         </div>

@@ -23,6 +23,7 @@ class Website extends Model
 		"desc_habitaciones_en",
 
 		"cover_popup",
+		"movil_popup",
 		"title_popup",
 		"desc_popup",
 		"link_popup",
