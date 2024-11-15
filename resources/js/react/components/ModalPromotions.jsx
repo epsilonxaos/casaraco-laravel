@@ -11,14 +11,13 @@ export const ModalPromotions = () => {
 	const [data, setData] = useState()
 
 	useEffect(() => {
-		if (open) document.querySelector('body').classList.add('overflow-hidden')
-		else document.querySelector('body').classList.remove('overflow-hidden')
+		if (!open) document.querySelector('body').classList.remove('overflow-hidden')
 	}, [open])
 
 	useEffect(() => {
 		async function fetchData() {
 			const response = await axios.get(_PATH_API + 'api/website')
-
+			document.querySelector('body').classList.add('overflow-hidden')
 			setData(response.data)
 		}
 		fetchData()

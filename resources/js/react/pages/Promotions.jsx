@@ -33,13 +33,13 @@ export const Promotions = () => {
 				</Container>
 
 				<Container className='max-w-[1200px]'>
-					{data && (
+					{/* {data && (
 						<PromotionCard
 							cover={'/img/promociones/1.jpg'}
 							url={data?.url_sala}>
 							<Text>{i18n.language == 'es' ? data?.desc_sala_es : data?.desc_sala_en}</Text>
 						</PromotionCard>
-					)}
+					)} */}
 					{data && (
 						<PromotionCard
 							cover={'/img/promociones/2.jpg'}
