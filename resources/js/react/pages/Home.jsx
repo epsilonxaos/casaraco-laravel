@@ -26,8 +26,8 @@ export default function Home() {
 			<hr className='mx-auto mb-10 w-[90%] border-t border-t-cafe md:hidden' />
 			<Gastronomy />
 			<hr className='mx-auto mb-10 w-[90%] border-t border-t-cafe md:hidden' />
-			<Boardroom />
-			<hr className='mx-auto mb-10 w-[90%] border-t border-t-cafe md:hidden' />
+			{/* <Boardroom />
+			<hr className='mx-auto mb-10 w-[90%] border-t border-t-cafe md:hidden' /> */}
 			<Coahuila />
 			<hr className='mx-auto mt-10 w-[90%] border-t border-t-cafe md:hidden' />
 			<Croquis />
