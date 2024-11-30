@@ -19,7 +19,7 @@ export default function Home() {
 			<Offers />
 			<Habitaciones />
 
-			<Sandra />
+			{/* <Sandra /> */}
 
 			<hr className='mx-auto my-10 w-[90%] border-t border-t-cafe md:hidden' />
 			<Experiences />
